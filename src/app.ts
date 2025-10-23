@@ -16,7 +16,7 @@ app.get("/api/v1/health", (_req, res) => {
 });
 
 app.get("/api/v1/portfolio/performance", (req, res) => {
-    // Accept query params for initial and current values (optional)
+ 
     const initialInvestment = Number(req.query.initial ?? 10000);
     const currentValue = Number(req.query.current ?? 12000);
     const result = calculatePortfolioPerformance({ initialInvestment, currentValue });
@@ -24,8 +24,7 @@ app.get("/api/v1/portfolio/performance", (req, res) => {
 });
 
 app.get("/api/v1/portfolio/largest-holding", (_req, res) => {
-    // Example input can be provided via JSON body or query in practice;
-    // for demo return a sample or accept query param (but GET w/body not standard).
+  
     const sample = [
         { name: "house", value: 150000 },
         { name: "stocks", value: 25000 },
