@@ -58,7 +58,6 @@ export function findLargestHolding(assets: Asset[]): Asset | null {
 // Allocation percentages: returns array of { name, percentage } — no if-statements
 export function allocationPercentages(assets: Asset[]): { name: string; percentage: number }[] {
   const total = assets.reduce((s, a) => s + a.value, 0) || 0;
-  // if total is 0 -> return empty array by mapping over assets produces NaNs; remove via filter using numeric guard without if.
   const result = assets.map(a => ({
     name: a.name,
     percentage: total === 0 ? 0 : (a.value / total) * 100
