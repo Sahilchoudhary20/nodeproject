@@ -26,7 +26,7 @@ export function calculatePortfolioPerformance({
   const percentageChange = (profitOrLoss / (initialInvestment || 1)) * 100;
 
   // produce summary WITHOUT using if statement
-  // using logical short-circuiting and fallback
+ 
   const gainMsg = `The portfolio has gained with a profit of $${profitOrLoss.toFixed(2)} (${percentageChange.toFixed(2)}%).`;
   const neutralMsg = `No change in portfolio value.`;
   const lossMsg = `The portfolio has a loss of $${Math.abs(profitOrLoss).toFixed(2)} (${percentageChange.toFixed(2)}%).`;
