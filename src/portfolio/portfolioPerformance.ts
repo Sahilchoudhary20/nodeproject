@@ -1,4 +1,4 @@
-// interfaces
+
 export interface PerformanceResult {
   initialInvestment: number;
   currentValue: number;
